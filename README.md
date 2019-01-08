@@ -1,6 +1,8 @@
 Breakout board for VoCore2 CPU module
 =====================================
 
+| <img src="https://github.com/electroniceel/vocore2-breakout/raw/master/photos/top-lowres.jpg" width=437 alt="Top side"> | <img src="https://github.com/electroniceel/vocore2-breakout/raw/master/photos/bottom-lowres.jpg" width=393 alt="Bottom side"> |
+
 Main Features
 -------------
 
@@ -18,9 +20,9 @@ Main Features
 Layout & Schematics
 -------------------
 
-See the ["kicad" directory](https://github.com/electroniceel/vocore-breakout/tree/master/kicad).
+See the ["kicad" directory](https://github.com/electroniceel/vocore2-breakout/tree/master/kicad).
 
-There is also a [PDF version of the schematics](https://github.com/electroniceel/vocore-breakout/raw/master/schmatics.pdf) available.
+There is also a [PDF version of the schematics](https://github.com/electroniceel/vocore2-breakout/raw/master/schmatics.pdf) available.
 
 Parts
 -----
