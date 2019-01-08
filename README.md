@@ -68,6 +68,7 @@ OpenWRT patches
 - But the Device Tree there is a bit "sparse" and some features are disabled
 - So I have created a new Target Profile called "VoCore2-Breakout" and some small adaptions to make the features work
 - You can find this work in the ["openwrt" directory](https://github.com/electroniceel/vocore2-breakout/tree/master/openwrt)
+- Use either the 0003a- or 0003b- patch based on how the solderbridges J3 & J4 are set
 
 To use these:
 1. First prepare the OpenWRT build system as described in https://openwrt.org/docs/guide-developer/build-system/start
