@@ -22,7 +22,7 @@ Layout & Schematics
 
 See the ["kicad" directory](https://github.com/electroniceel/vocore2-breakout/tree/master/kicad).
 
-There is also a [PDF version of the schematics](https://github.com/electroniceel/vocore2-breakout/raw/master/schmatics.pdf) available.
+There is also a [PDF version of the schematics](https://github.com/electroniceel/vocore2-breakout/raw/master/schematics.pdf) available.
 
 Parts
 -----
