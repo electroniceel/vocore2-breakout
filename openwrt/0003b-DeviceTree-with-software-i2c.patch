@@ -1,0 +1,49 @@
+From 82331a9e458dcd19782d37d49952abf4108c5f87 Mon Sep 17 00:00:00 2001
+From: Electronic Eel <electroniceel2@googlemail.com>
+Date: Tue, 8 Jan 2019 18:43:30 +0100
+Subject: [PATCH 3/3] DeviceTree with software i2c
+
+---
+ target/linux/ramips/dts/VOCORE2BREAKOUT.dts | 26 +++++++++++++++++++++
+ 1 file changed, 26 insertions(+)
+
+diff --git a/target/linux/ramips/dts/VOCORE2BREAKOUT.dts b/target/linux/ramips/dts/VOCORE2BREAKOUT.dts
+index 9d7c00e78a..459f8d8fc0 100644
+--- a/target/linux/ramips/dts/VOCORE2BREAKOUT.dts
++++ b/target/linux/ramips/dts/VOCORE2BREAKOUT.dts
+@@ -16,6 +16,32 @@
+ 			gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
+ 		};
+ 	};
++
++	i2c-gpio {
++		#address-cells = <1>;
++		#size-cells = <0>;
++
++		compatible = "i2c-gpio";
++		gpios = <&gpio1 8 GPIO_ACTIVE_HIGH     /* sda, GPIO40 */
++		         &gpio1 7 GPIO_ACTIVE_HIGH>;   /* scl, GPIO39 */
++		i2c-gpio,delay-us = <10>;              /* ~45 kHz */
++
++        lm75@48 {
++            compatible = "lm75";
++            reg = <0x48>;
++            status = "okay";
++        };
++
++        rtc: rtc@32 {
++            compatible = "microcrystal,rv8803";
++            reg = <0x32>;
++            status = "okay";
++        };
++	};
++};
++
++&i2c {
++    status = "okay";
+ };
+ 
+ &spi0 {
+-- 
+2.17.2
+

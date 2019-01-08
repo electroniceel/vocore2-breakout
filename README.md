@@ -67,11 +67,11 @@ OpenWRT patches
 - OpenWRT upstream already contains support for the VoCore2
 - But the Device Tree there is a bit "sparse" and some features are disabled
 - So I have created a new Target Profile called "VoCore2-Breakout" and some small adaptions to make the features work
-- You can find this work in the "openwrt" directory
+- You can find this work in the ["openwrt" directory](https://github.com/electroniceel/vocore2-breakout/tree/master/openwrt)
 
 To use these:
 1. First prepare the OpenWRT build system as described in https://openwrt.org/docs/guide-developer/build-system/start
-2. Apply the patches before running "make menuconfig"
+2. Apply my patches before running "make menuconfig"
 3. Select Target "MediaTek Ralink MIPS", Subtarget "MT76x8 based boards", Target Profile "VoCore2-Breakout"
 4. Build
 

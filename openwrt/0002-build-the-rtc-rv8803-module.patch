@@ -1,0 +1,76 @@
+From ca747a50a12a8efe3d7d486969848b391896ef06 Mon Sep 17 00:00:00 2001
+From: Electronic Eel <electroniceel2@googlemail.com>
+Date: Tue, 8 Jan 2019 18:33:30 +0100
+Subject: [PATCH 2/3] build the rtc-rv8803 module
+
+Also fix loading the i2c modules. The i2c hardware module and rtc
+module must be loaded when the hwclock command is run by
+/etc/init.d/sysfixtime.
+
+This is ensured by linking them in /etc/modules-boot.d, done with the
+autoload-parameter 1 in the Makefiles.
+---
+ package/kernel/linux/modules/i2c.mk   |  2 +-
+ package/kernel/linux/modules/other.mk | 19 +++++++++++++++++++
+ target/linux/ramips/modules.mk        |  2 +-
+ 3 files changed, 21 insertions(+), 2 deletions(-)
+
+diff --git a/package/kernel/linux/modules/i2c.mk b/package/kernel/linux/modules/i2c.mk
+index 4cf37dae07..0107d23c96 100644
+--- a/package/kernel/linux/modules/i2c.mk
++++ b/package/kernel/linux/modules/i2c.mk
+@@ -88,7 +88,7 @@ I2C_GPIO_MODULES:= \
+   CONFIG_I2C_GPIO:drivers/i2c/busses/i2c-gpio
+ 
+ define KernelPackage/i2c-gpio
+-  $(call i2c_defaults,$(I2C_GPIO_MODULES),59)
++  $(call i2c_defaults,$(I2C_GPIO_MODULES),59,1)
+   TITLE:=GPIO-based bitbanging I2C
+   DEPENDS:=@GPIO_SUPPORT +kmod-i2c-algo-bit
+ endef
+diff --git a/package/kernel/linux/modules/other.mk b/package/kernel/linux/modules/other.mk
+index ecf222ac13..cf86b5d5cc 100644
+--- a/package/kernel/linux/modules/other.mk
++++ b/package/kernel/linux/modules/other.mk
+@@ -623,6 +623,25 @@ endef
+ 
+ $(eval $(call KernelPackage,rtc-rs5c372a))
+ 
++define KernelPackage/rtc-rv8803
++  SUBMENU:=$(OTHER_MENU)
++  TITLE:=Micro Crystal RV8803, Epson RX8900 RTC support
++  DEFAULT:=m if ALL_KMODS && RTC_SUPPORT
++  DEPENDS:=+kmod-i2c-core
++  KCONFIG:=CONFIG_RTC_DRV_RV8803 \
++	CONFIG_RTC_CLASS=y
++  FILES:=$(LINUX_DIR)/drivers/rtc/rtc-rv8803.ko
++  AUTOLOAD:=$(call AutoLoad,60,rtc-rv8803,1)
++endef
++
++define KernelPackage/rtc-rv8803/description
++ Kernel module for Micro Crystal RV8803 RTC chip.
++ Works also for the Epson RX8900.
++endef
++
++$(eval $(call KernelPackage,rtc-rv8803))
++
++
+ 
+ define KernelPackage/mtdtests
+   SUBMENU:=$(OTHER_MENU)
+diff --git a/target/linux/ramips/modules.mk b/target/linux/ramips/modules.mk
+index 88e83a487f..1f5775dcde 100644
+--- a/target/linux/ramips/modules.mk
++++ b/target/linux/ramips/modules.mk
+@@ -62,7 +62,7 @@ I2C_MT7621_MODULES:= \
+   CONFIG_I2C_MT7621:drivers/i2c/busses/i2c-mt7621
+ 
+ define KernelPackage/i2c-mt7628
+-  $(call i2c_defaults,$(I2C_MT7621_MODULES),59)
++  $(call i2c_defaults,$(I2C_MT7621_MODULES),59,1)
+   TITLE:=MT7628/88 I2C Controller
+   DEPENDS:=kmod-i2c-core \
+ 	@(TARGET_ramips_mt76x8)
+-- 
+2.17.2
+

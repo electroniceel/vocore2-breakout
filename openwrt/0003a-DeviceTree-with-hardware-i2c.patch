@@ -1,0 +1,40 @@
+From e436cb333433e9e985971b6e44191a2f29e19fd1 Mon Sep 17 00:00:00 2001
+From: Electronic Eel <electroniceel2@googlemail.com>
+Date: Tue, 8 Jan 2019 18:38:55 +0100
+Subject: [PATCH 3/3] DeviceTree with hardware i2c
+
+---
+ target/linux/ramips/dts/VOCORE2BREAKOUT.dts | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+
+diff --git a/target/linux/ramips/dts/VOCORE2BREAKOUT.dts b/target/linux/ramips/dts/VOCORE2BREAKOUT.dts
+index 9d7c00e78a..eee0d693f1 100644
+--- a/target/linux/ramips/dts/VOCORE2BREAKOUT.dts
++++ b/target/linux/ramips/dts/VOCORE2BREAKOUT.dts
+@@ -53,3 +53,23 @@
+ 		};
+ 	};
+ };
++
++&i2c {
++	status = "okay";
++	
++	lm75@48 {
++         compatible = "lm75";
++         reg = <0x48>;
++         status = "okay";
++    };
++     
++    rtc: rtc@32 {
++         compatible = "microcrystal,rv8803";
++         reg = <0x32>;
++         status = "okay";
++    };
++};
++
++&sdhci {
++	status = "okay";
++};
+-- 
+2.17.2
+
