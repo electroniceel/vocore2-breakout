@@ -1,0 +1,404 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:win
+LIBS:hr911105_rj45
+LIBS:ip4220cz6
+LIBS:74xgxx
+LIBS:tm-kicad-lib
+LIBS:mt9700
+LIBS:lm75
+LIBS:SY8113B
+LIBS:rv-8803
+LIBS:solderbridge
+LIBS:vocore-breakout-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 5
+Title "VoCore2-Breakout / Ethernet connector"
+Date ""
+Rev ""
+Comp "(C) by Electronic Eel"
+Comment1 "CC-BY-4.0"
+Comment2 "https://git.io/fpKW4"
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	3450 4200 4550 4200
+Wire Wire Line
+	4550 4550 3450 4550
+Wire Wire Line
+	3450 4350 4550 4350
+$Comp
+L C C5
+U 1 1 5BB51861
+P 4050 5450
+F 0 "C5" H 4075 5550 50  0000 L CNN
+F 1 "100nF" H 4075 5350 50  0000 L CNN
+F 2 "modules:SMD0603-wide-C" H 4088 5300 50  0001 C CNN
+F 3 "" H 4050 5450 50  0001 C CNN
+	1    4050 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C6
+U 1 1 5BB51868
+P 4450 5450
+F 0 "C6" H 4475 5550 50  0000 L CNN
+F 1 "100nF" H 4475 5350 50  0000 L CNN
+F 2 "modules:SMD0603-wide-C" H 4488 5300 50  0001 C CNN
+F 3 "" H 4450 5450 50  0001 C CNN
+	1    4450 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR035
+U 1 1 5BB5186F
+P 4050 5700
+F 0 "#PWR035" H 4050 5450 50  0001 C CNN
+F 1 "GND" H 4050 5550 50  0000 C CNN
+F 2 "" H 4050 5700 50  0001 C CNN
+F 3 "" H 4050 5700 50  0001 C CNN
+	1    4050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR036
+U 1 1 5BB51875
+P 4450 5700
+F 0 "#PWR036" H 4450 5450 50  0001 C CNN
+F 1 "GND" H 4450 5550 50  0000 C CNN
+F 2 "" H 4450 5700 50  0001 C CNN
+F 3 "" H 4450 5700 50  0001 C CNN
+	1    4450 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4450 4050 5300
+Wire Wire Line
+	3450 4450 4050 4450
+Wire Wire Line
+	4450 4100 4450 5300
+Wire Wire Line
+	3450 4100 4450 4100
+Wire Wire Line
+	4050 5600 4050 5700
+Wire Wire Line
+	4450 5600 4450 5700
+$Comp
+L R R14
+U 1 1 5BB518D9
+P 4700 4350
+F 0 "R14" V 4780 4350 50  0000 C CNN
+F 1 "49.9R" V 4700 4350 50  0000 C CNN
+F 2 "modules:SMD0603-wide-R" V 4630 4350 50  0001 C CNN
+F 3 "" H 4700 4350 50  0001 C CNN
+	1    4700 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R15
+U 1 1 5BB51908
+P 4700 4550
+F 0 "R15" V 4780 4550 50  0000 C CNN
+F 1 "49.9R" V 4700 4550 50  0000 C CNN
+F 2 "modules:SMD0603-wide-R" V 4630 4550 50  0001 C CNN
+F 3 "" H 4700 4550 50  0001 C CNN
+	1    4700 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R13
+U 1 1 5BB51929
+P 4700 4200
+F 0 "R13" V 4780 4200 50  0000 C CNN
+F 1 "49.9R" V 4700 4200 50  0000 C CNN
+F 2 "modules:SMD0603-wide-R" V 4630 4200 50  0001 C CNN
+F 3 "" H 4700 4200 50  0001 C CNN
+	1    4700 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L R R12
+U 1 1 5BB51950
+P 4700 4000
+F 0 "R12" V 4780 4000 50  0000 C CNN
+F 1 "49.9R" V 4700 4000 50  0000 C CNN
+F 2 "modules:SMD0603-wide-R" V 4630 4000 50  0001 C CNN
+F 3 "" H 4700 4000 50  0001 C CNN
+	1    4700 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 4000 4550 4000
+$Comp
+L C C7
+U 1 1 5BB51A38
+P 5050 5450
+F 0 "C7" H 5075 5550 50  0000 L CNN
+F 1 "100nF" H 5075 5350 50  0000 L CNN
+F 2 "modules:SMD0603-wide-C" H 5088 5300 50  0001 C CNN
+F 3 "" H 5050 5450 50  0001 C CNN
+	1    5050 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C8
+U 1 1 5BB51A87
+P 5350 5450
+F 0 "C8" H 5375 5550 50  0000 L CNN
+F 1 "100nF" H 5375 5350 50  0000 L CNN
+F 2 "modules:SMD0603-wide-C" H 5388 5300 50  0001 C CNN
+F 3 "" H 5350 5450 50  0001 C CNN
+	1    5350 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4350 5050 5300
+Wire Wire Line
+	5050 4550 4850 4550
+Wire Wire Line
+	5050 4350 4850 4350
+Connection ~ 5050 4550
+Wire Wire Line
+	5350 4000 5350 5300
+Wire Wire Line
+	5350 4200 4850 4200
+Wire Wire Line
+	5350 4000 4850 4000
+Connection ~ 5350 4200
+$Comp
+L GND #PWR037
+U 1 1 5BB51BF2
+P 5050 5700
+F 0 "#PWR037" H 5050 5450 50  0001 C CNN
+F 1 "GND" H 5050 5550 50  0000 C CNN
+F 2 "" H 5050 5700 50  0001 C CNN
+F 3 "" H 5050 5700 50  0001 C CNN
+	1    5050 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR038
+U 1 1 5BB51C18
+P 5350 5700
+F 0 "#PWR038" H 5350 5450 50  0001 C CNN
+F 1 "GND" H 5350 5550 50  0000 C CNN
+F 2 "" H 5350 5700 50  0001 C CNN
+F 3 "" H 5350 5700 50  0001 C CNN
+	1    5350 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5700 5050 5600
+Wire Wire Line
+	5350 5700 5350 5600
+$Comp
+L +3.3V #PWR039
+U 1 1 5BB521E4
+P 3900 4750
+F 0 "#PWR039" H 3900 4600 50  0001 C CNN
+F 1 "+3.3V" H 3900 4890 50  0000 C CNN
+F 2 "" H 3900 4750 50  0001 C CNN
+F 3 "" H 3900 4750 50  0001 C CNN
+	1    3900 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R11
+U 1 1 5BB5222F
+P 3700 4800
+F 0 "R11" V 3780 4800 50  0000 C CNN
+F 1 "1K" V 3700 4800 50  0000 C CNN
+F 2 "modules:SMD0603-wide-R" V 3630 4800 50  0001 C CNN
+F 3 "" H 3700 4800 50  0001 C CNN
+	1    3700 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3450 4800 3550 4800
+Wire Wire Line
+	3850 4800 3900 4800
+Wire Wire Line
+	3900 4800 3900 4750
+Wire Wire Line
+	3550 4950 3550 4900
+Wire Wire Line
+	3550 4900 3450 4900
+$Comp
+L GND #PWR040
+U 1 1 5BB52744
+P 2600 5500
+F 0 "#PWR040" H 2600 5250 50  0001 C CNN
+F 1 "GND" H 2600 5350 50  0000 C CNN
+F 2 "" H 2600 5500 50  0001 C CNN
+F 3 "" H 2600 5500 50  0001 C CNN
+	1    2600 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 5500 2600 5400
+$Comp
+L IP4220CZ6 U3
+U 1 1 5BB52956
+P 4925 2725
+F 0 "U3" H 4925 1975 60  0000 C CNN
+F 1 "IP4220CZ6" H 4925 3225 60  0000 C CNN
+F 2 "modules:SOT-23-6" H 4925 2725 60  0001 C CNN
+F 3 "" H 4925 2725 60  0001 C CNN
+	1    4925 2725
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR041
+U 1 1 5BB52A57
+P 5050 3350
+F 0 "#PWR041" H 5050 3100 50  0001 C CNN
+F 1 "GND" H 5050 3200 50  0000 C CNN
+F 2 "" H 5050 3350 50  0001 C CNN
+F 3 "" H 5050 3350 50  0001 C CNN
+	1    5050 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3350 5050 3300
+$Comp
+L +3.3V #PWR042
+U 1 1 5BB52B41
+P 5050 2150
+F 0 "#PWR042" H 5050 2000 50  0001 C CNN
+F 1 "+3.3V" H 5050 2290 50  0000 C CNN
+F 2 "" H 5050 2150 50  0001 C CNN
+F 3 "" H 5050 2150 50  0001 C CNN
+	1    5050 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 2200 5050 2150
+Wire Wire Line
+	4450 4000 4450 3800
+Wire Wire Line
+	4450 3800 5950 3800
+Wire Wire Line
+	5350 3800 5350 3300
+Connection ~ 4450 4000
+Wire Wire Line
+	4750 3300 4750 3650
+Wire Wire Line
+	4250 3650 5950 3650
+Wire Wire Line
+	4250 3650 4250 4200
+Connection ~ 4250 4200
+Wire Wire Line
+	3900 1850 3900 4350
+Connection ~ 3900 4350
+Wire Wire Line
+	3900 1850 5950 1850
+Wire Wire Line
+	3600 1650 5950 1650
+Wire Wire Line
+	3600 1650 3600 4550
+Connection ~ 3600 4550
+$Comp
+L HR911105_RJ45 J9
+U 1 1 5BB517AF
+P 2900 4500
+F 0 "J9" H 3050 5150 60  0000 C CNN
+F 1 "HR911105_RJ45" V 3450 4650 60  0000 C CNN
+F 2 "modules:RJ45-HR911105A" H 2900 4500 60  0001 C CNN
+F 3 "" H 2900 4500 60  0001 C CNN
+	1    2900 4500
+	-1   0    0    -1  
+$EndComp
+Text HLabel 5950 3650 2    60   Input ~ 0
+ETH_RP
+Text HLabel 5950 3800 2    60   Input ~ 0
+ETH_RN
+Connection ~ 4750 3650
+Connection ~ 5350 3800
+Text HLabel 5950 1650 2    60   Input ~ 0
+ETH_TP
+Text HLabel 5950 1850 2    60   Input ~ 0
+ETH_TN
+Text HLabel 6000 4950 2    60   Input ~ 0
+LINK_LED
+Wire Wire Line
+	3550 4950 6000 4950
+Wire Wire Line
+	5350 1850 5350 2200
+Connection ~ 5350 1850
+Wire Wire Line
+	4750 2200 4750 1650
+Connection ~ 4750 1650
+$Comp
+L +3.3V #PWR043
+U 1 1 5BFAD006
+P 3900 5150
+F 0 "#PWR043" H 3900 5000 50  0001 C CNN
+F 1 "+3.3V" H 3900 5290 50  0000 C CNN
+F 2 "" H 3900 5150 50  0001 C CNN
+F 3 "" H 3900 5150 50  0001 C CNN
+	1    3900 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R28
+U 1 1 5BFAD030
+P 3700 5150
+F 0 "R28" V 3780 5150 50  0000 C CNN
+F 1 "1K" V 3700 5150 50  0000 C CNN
+F 2 "modules:SMD0603-wide-R" V 3630 5150 50  0001 C CNN
+F 3 "" H 3700 5150 50  0001 C CNN
+	1    3700 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 5150 3850 5150
+Wire Wire Line
+	3550 5150 3550 5050
+Wire Wire Line
+	3550 5050 3450 5050
+Text HLabel 6000 5100 2    60   Input ~ 0
+USER_LED
+Wire Wire Line
+	6000 5100 4250 5100
+Wire Wire Line
+	4250 5100 4250 5300
+Wire Wire Line
+	4250 5300 3450 5300
+Wire Wire Line
+	3450 5300 3450 5150
+$EndSCHEMATC

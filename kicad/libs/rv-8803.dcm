@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP RV-8803
+D MicroCrystal RV-8803-C7
+K RTC MicroCrystal RV-8803 RV-8803-C7 RX-8803SA
+$ENDCMP
+#
+#End Doc Library
