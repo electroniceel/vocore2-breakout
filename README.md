@@ -1,7 +1,7 @@
 Breakout board for VoCore2 CPU module
 =====================================
 
-| <img src="https://github.com/electroniceel/vocore2-breakout/raw/master/photos/top-lowres.jpg" width=437 alt="Top side"> | <img src="https://github.com/electroniceel/vocore2-breakout/raw/master/photos/bottom-lowres.jpg" width=393 alt="Bottom side"> |
+| [<img src="https://github.com/electroniceel/vocore2-breakout/raw/master/photos/top-lowres.jpg" width=437 alt="Top side">](https://github.com/electroniceel/vocore2-breakout/raw/master/photos/top-highres.jpg) | [<img src="https://github.com/electroniceel/vocore2-breakout/raw/master/photos/bottom-lowres.jpg" width=393 alt="Bottom side">](https://github.com/electroniceel/vocore2-breakout/raw/master/photos/bottom-highres.jpg) |
 
 Main Features
 -------------
